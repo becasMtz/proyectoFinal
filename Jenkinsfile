@@ -28,9 +28,11 @@ pipeline{
             }
         }
 
-        stage('Deploy'){
-            script{
-                docker.build(DOCKER_IMAGE,".");
+        stage('Build'){
+            steps{
+                script{
+                    docker.build(DOCKER_IMAGE,".");
+                }
             }
         }
     }
