@@ -8,7 +8,7 @@ pipeline{
         DOCKER_USERNAME = 'becasmtz'
         DOCKER_CREDENTIALS = 'docker-hub-credentials'
         DOCKER_IMAGE = "${DOCKER_USERNAME}/${IMAGE_NAME}"
-        EMAIL_FROM 'rmtzbarron@gmail.com'
+        EMAIL_FROM = 'rmtzbarron@gmail.com'
         EMAIL_TO = 'rmtzbarron@gmail.com'
     }
 
