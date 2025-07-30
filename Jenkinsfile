@@ -2,7 +2,7 @@ pipeline{
     agent any //ayuda a definir si vamos a usar un agente en especifico (de java, python, node, etc.)
 
     environment{
-        IMAGE_NAME = 'proyectoFinal'
+        IMAGE_NAME = 'proyectofinal'
         IMAGE_NAME_TEST = 'proyectofinaltesting'
         DOCKER_USERNAME = 'becasmtz'
         DOCKER_CREDENTIALS = 'docker-hub-credentials'
