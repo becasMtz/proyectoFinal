@@ -2,7 +2,7 @@ pipeline{
     agent any //ayuda a definir si vamos a usar un agente en especifico (de java, python, node, etc.)
 
     triggers{
-        gitHubPush()
+        githubPush()
     }
 
     stages{
