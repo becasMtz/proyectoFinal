@@ -1,0 +1,13 @@
+#toda comunicaicón de red (interna o externa) tenemos que hacer un service
+apiVersion: v1
+kind: Service
+metadata:
+  name: proyectofinal
+  namespace: proyectofinal
+spec:
+  selector:
+    app: proyectofinal #tiene que matchear con app de deployment?
+  ports:
+    - nodePort: 30000
+      port: 7000
+      targetPort: 7000
