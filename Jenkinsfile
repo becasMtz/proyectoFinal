@@ -8,6 +8,8 @@ pipeline{
         DOCKER_USERNAME = 'becasmtz'
         DOCKER_CREDENTIALS = 'docker-hub-credentials'
         DOCKER_IMAGE = "${DOCKER_USERNAME}/${IMAGE_NAME}"
+        EMAIL_FROM 'rmtzbarron@gmail.com'
+        EMAIL_TO = 'rmtzbarron@gmail.com'
     }
 
     triggers{
@@ -55,6 +57,15 @@ pipeline{
                     bat 'kubectl apply -f k8s/service.yaml'
                 }
             }
+        }
+    }
+
+    post{
+        success{
+            mail to: EMAIL_TO, EMAIL_FROM, subject: "Jenkins build was successfull", body: "Jenkins build was successfull"
+        }
+        failure{
+            mail to: EMAIL_TO, EMAIL_FROM, subject: "Jenkins build failed", body: "Jenkins build failed"
         }
     }
 }
