@@ -2,6 +2,7 @@ pipeline{
     agent any //ayuda a definir si vamos a usar un agente en especifico (de java, python, node, etc.)
 
     environment{
+        KUBECONFIG = 'C:\\Program Files\\Jenkins\\kubeconfig.yaml'
         IMAGE_NAME = 'proyectofinal'
         IMAGE_NAME_TEST = 'proyectofinaltesting'
         DOCKER_USERNAME = 'becasmtz'

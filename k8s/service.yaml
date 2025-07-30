@@ -5,9 +5,10 @@ metadata:
   name: proyectofinal
   namespace: proyectofinal
 spec:
+  type: NodePort
   selector:
     app: proyectofinal #tiene que matchear con app de deployment?
   ports:
-    - nodePort: 30000
+    - nodeport: 30000
       port: 7000
       targetPort: 7000
