@@ -9,6 +9,6 @@ spec:
   selector:
     app: proyectofinal #tiene que matchear con app de deployment?
   ports:
-    - nodeport: 30000
+    - nodePort: 30000
       port: 7000
       targetPort: 7000
