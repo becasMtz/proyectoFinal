@@ -15,7 +15,7 @@ pipeline{
         stage('Test'){
             steps{
                 script{
-                    docker.Build("proyectofinaltesting","--file=Dockerfile.test .")
+                    docker.build("proyectofinaltesting","--file=Dockerfile.test .")
                 }
             }
         }
